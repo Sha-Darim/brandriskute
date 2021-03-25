@@ -74,7 +74,7 @@ class BrandriskSensor(Entity):
         """Icon to use in the frontend."""
         if self._api.current['Grass'] > self._api.current['Wood']:
             return self._icon[0]
-        else
+        else:
             return self._icon[1]
 
     @property
