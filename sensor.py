@@ -2,8 +2,6 @@
 
 Example configuration
 
-Example advanced configuration
-
 sensor:
   - platform: brandriskute
     latitude: !secret lat_coord

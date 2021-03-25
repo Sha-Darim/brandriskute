@@ -1,9 +1,9 @@
 {
   "domain": "brandriskute",
   "name": "Brandrisk ute",
-  "documentation": "https://github.com/shadarim/brandriskute",
+  "documentation": "https://github.com/Sha-Darim/brandriskute",
   "dependencies": [],
-  "codeowners": ["@shadarim"],
+  "codeowners": ["@Sha-Darim"],
   "requirements": ["jsonpath>=0.82", "xmltodict>=0.12.0"],
-  "version": "v0.1"
+  "version": "v1.0.0"
 }
