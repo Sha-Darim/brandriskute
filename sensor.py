@@ -41,8 +41,8 @@ PLATFORM_SCHEMA = PLATFORM_SCHEMA.extend({
 })
 
 def setup_platform(hass, config, add_entities, discovery_info=None):
-    """Set up the Brandrisk sensors."""
-    name = config.get(CONF_NAME)
+    """Set up the Brandrisk sensor."""
+    name = config.get(CONF_NAME) if config.get(CONF_NAME) is not None else DEFAULT_NAME
     latitude = config.get(CONF_LATITUDE) if config.get(CONF_LATITUDE) is not None else hass.config.latitude
     longitude = config.get(CONF_LONGITUDE) if config.get(CONF_LONGITUDE) is not None else hass.config.longitude
 
@@ -133,7 +133,6 @@ class BrandriskAPI:
             data = response.read().decode('utf-8')
             jsondata = json.loads(data)
             self.current = self.make_object(jsondata)
-            _LOGGER.debug(self.current)
 
             # Fetch forecast
             response = urlopen(self.URL_FORECAST.format(lat=self.lat, lon=self.lon))
@@ -142,9 +141,7 @@ class BrandriskAPI:
             jsondata = json.loads(data)
 
             for index, element in enumerate(jsondata):
-                _LOGGER.debug(element)
                 self.forecast.append(self.make_object(element))
-            #+ ":" + self.current['Wood']
 
             if self.current['Grass'] == 6 or self.current['Wood'] == 6:
                 risk = "Extermt stor risk"
@@ -169,13 +166,6 @@ class BrandriskAPI:
 
     def make_object(self, element):
         risk = {}
-
-       # "Date": "2021-03-29",
-       # "Grass": 3,
-       # "GrassMsg": "Var försiktig när du eldar och grillar utomhus. Gammalt fjolårsgräs kan antändas.",
-       # "IssuedDate": "2021-03-24",
-       # "Wood": -1,
-       # "WoodMsg": "Inget värde"
 
         risk['Date'] = element['Date']
         risk['Grass'] = element['Grass']
