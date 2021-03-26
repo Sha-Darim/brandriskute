@@ -24,9 +24,9 @@ There are two different kind of risks:
 key | type | description
 :--- | :--- | :---
 **platform (Required)** | string | `brandriskute`
-**latitude (Optional)** | string | The latitude of the position from which the sensor should look for messages. Default `home zone latitude`
-**longitude (Optional)** | string | The longitude of the position from which the sensor should look for messages. Default `home zone longitude`
-**name (Optional)** | string | Custom name for the sensor. Default `brandriskute`. (If country is configured the default will be `sensor.krisinformation_sverige` for `country: 'Sverige'`.)
+**latitude (Optional)** | string | The latitude of the position from which the sensor should look for fire risks messages. Default `home zone latitude`
+**longitude (Optional)** | string | The longitude of the position from which the sensor should look for fire risks messages. Default `home zone longitude`
+**name (Optional)** | string | Custom name for the sensor. Default `Brandrisk Ute`.
 
 **Example minimal configuration.yaml**
 ```yaml
