@@ -34,7 +34,7 @@ sensor:
   - platform: brandriskute
 ```
 
-**Example configuration.yaml using latitude/longitude from secret**
+**Example configuration.yaml using latitude/longitude from [secrets](https://www.home-assistant.io/docs/configuration/secrets/)**
 ```yaml
 sensor:
   - platform: brandriskute
