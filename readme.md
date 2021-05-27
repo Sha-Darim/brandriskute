@@ -4,6 +4,7 @@
 
 [![maintainer](https://img.shields.io/badge/maintainer-Fredric%20Palmgren%20%40sha--darim-blue.svg?style=for-the-badge)](#)
 
+[![hacs_badge](https://img.shields.io/badge/HACS-Custom-orange.svg?style=for-the-badge)](https://github.com/custom-components/hacs)
 
 # Brandrisk Ute
 Component to get swedish outdoors fire risks for [Home Assistant](https://www.home-assistant.io/).
