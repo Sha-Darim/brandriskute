@@ -25,7 +25,7 @@ from homeassistant.const import (
     CONF_LATITUDE, CONF_LONGITUDE, CONF_NAME)
 from homeassistant.util import Throttle
 
-__version__ = '1.1.0'
+__version__ = '1.1.1'
 
 _LOGGER = logging.getLogger(__name__)
 
@@ -281,11 +281,7 @@ class BrandriskAPI:
                 response = urlopen(self.URL_BASE + self.URL_PROHIBITION.format(lat=self.lat, lon=self.lon))
                 data = response.read().decode('utf-8')
                 jsondata = json.loads(data)
-                if self.verbose:
-                    self.prohibition = jsondata['fireProhibition']
-                else:
-                    self.prohibition['status'] = jsondata['fireProhibition']['status']
-
+                self.prohibition = jsondata['fireProhibition']
                 self.available = True
             except Exception as e:
                 _LOGGER.error("Unable to fetch prohibition from Brandrisk Ute.")
