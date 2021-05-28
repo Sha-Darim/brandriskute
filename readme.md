@@ -1,6 +1,6 @@
 ![stability-wip](https://img.shields.io/badge/stability-work_in_progress-lightgrey.svg?style=for-the-badge)
 
-[![Version](https://img.shields.io/badge/version-1.0.0-green.svg?style=for-the-badge)](#) [![maintained](https://img.shields.io/maintenance/yes/2021.svg?style=for-the-badge)](#)
+[![Version](https://img.shields.io/badge/version-1.1.1-green.svg?style=for-the-badge)](#) [![maintained](https://img.shields.io/maintenance/yes/2021.svg?style=for-the-badge)](#)
 
 [![maintainer](https://img.shields.io/badge/maintainer-Fredric%20Palmgren%20%40sha--darim-blue.svg?style=for-the-badge)](#)
 
@@ -9,10 +9,11 @@
 # Brandrisk Ute
 Component to get swedish outdoors fire risks for [Home Assistant](https://www.home-assistant.io/).
 
-The plugin will get fire risks from the Brandrisk Ute API for the supplied position.
-There are two different kind of risks:
+The plugin will get fire risks and fire prohibition from the Brandrisk Ute API for the supplied position.
+The plugin supplies three different sensors:
 1. Current risk
 2. 3 days forecast
+3. Fire prohibiiotn
 
 ## Installation:
 1. Install this component by creating a `custom_components` folder in the same folder as your configuration.yaml is, if you don't already have one.
@@ -28,6 +29,9 @@ key | type | description
 **latitude (Optional)** | string | The latitude of the position from which the sensor should look for fire risks messages. Default `home zone latitude`
 **longitude (Optional)** | string | The longitude of the position from which the sensor should look for fire risks messages. Default `home zone longitude`
 **name (Optional)** | string | Custom name for the sensor. Default `Brandrisk Ute`.
+**verbose (Optional)** | boolean | Use full information or the the basics only. Default `True`
+**forecast (Optional)** | boolean | Use forecast sensor. Default `True`
+**prohibition (Optional)** | boolean | Use prohibition sensor. Default `True`
 
 **Example minimal configuration.yaml**
 ```yaml
@@ -39,7 +43,25 @@ sensor:
 ```yaml
 sensor:
   - platform: brandriskute
-    latitude: !secret latitude
-    longitude: !secret longitude
+    latitude: !secret lat_coord
+    longitude: !secret long_coord
+    forecast: false
+    prohibition: true
+    verbose: false
+```
+
+**Example automation using prohibition change**
+```yaml
+alias: 'Eldningsförbud Alert'
+initial_state: 'on'
+trigger:
+  - platform: state
+    entity_id: sensor.brandriskute_prohibition
+action:
+  - service: notify.mobile_app_user
+    data-template:
+      message: "{{ states('sensor.brandriskute_prohibition') }} {{ state_attr('sensor.brandriskute_prohibition', 'startDate') }} {{ state_attr('sensor.brandriskute_prohibition', 'description') }}
 ```
 ***
+
+
