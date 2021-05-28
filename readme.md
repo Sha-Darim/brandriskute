@@ -13,7 +13,7 @@ The plugin will get fire risks and fire prohibition from the Brandrisk Ute API f
 The plugin supplies three different sensors:
 1. Current risk
 2. 3 days forecast
-3. Fire prohibiiotn
+3. Fire prohibition
 
 ## Installation:
 1. Install this component by creating a `custom_components` folder in the same folder as your configuration.yaml is, if you don't already have one.
