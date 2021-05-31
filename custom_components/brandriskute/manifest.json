@@ -4,6 +4,7 @@
   "documentation": "https://github.com/Sha-Darim/brandriskute",
   "dependencies": [],
   "codeowners": ["@Sha-Darim"],
+  "issue_tracker": "https://github.com/Sha-Darim/brandriskute/issues",
   "requirements": ["jsonpath>=0.82"],
   "version": "v1.1.1"
 }
