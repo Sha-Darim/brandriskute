@@ -1,4 +1,5 @@
 {
-  "name": "brandrisk",
-  "render_readme": true
+  "name": "Brandrisk ute",
+  "render_readme": true,
+  "domains": ["sensor"]
 }
