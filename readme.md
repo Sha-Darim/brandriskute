@@ -9,7 +9,7 @@
 # Brandrisk Ute
 Component to get swedish outdoors fire risks for [Home Assistant](https://www.home-assistant.io/).
 
-The plugin will get fire risks and fire prohibition from the Brandrisk Ute API for the supplied position.
+The custom compontnet will, while using the supplied position, get fire risks and fire prohibition information from MSB's [Brandrisk Ute API](https://www.msb.se/sv/om-msb/informationskanaler/appar/brandrisk-ute/).
 The plugin supplies three different sensors:
 1. Current risk
 2. 3 days forecast
