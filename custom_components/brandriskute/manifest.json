@@ -6,5 +6,6 @@
   "codeowners": ["@Sha-Darim"],
   "issue_tracker": "https://github.com/Sha-Darim/brandriskute/issues",
   "version": "v1.1.2",
+  "requirements": [],
   "iot_class": "cloud_polling"
 }
