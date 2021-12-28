@@ -25,7 +25,7 @@ from homeassistant.const import (
     CONF_LATITUDE, CONF_LONGITUDE, CONF_NAME)
 from homeassistant.util import Throttle
 
-__version__ = '1.1.1'
+__version__ = '1.1.3'
 
 _LOGGER = logging.getLogger(__name__)
 
