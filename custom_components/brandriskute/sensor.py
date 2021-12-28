@@ -93,7 +93,7 @@ class BrandriskSensor(Entity):
         return self._api.state
 
     @property
-    def device_state_attributes(self):
+    def extra_state_attributes(self):
         """Return the state attributes of the sensor."""
         data = {}
         keys = list(self._api.current.keys())
@@ -139,7 +139,7 @@ class BrandriskForecastSensor(Entity):
         return self._api.state
 
     @property
-    def device_state_attributes(self):
+    def extra_state_attributes(self):
         """Return the state attributes of the sensor."""
 
         return {
@@ -179,7 +179,7 @@ class BrandriskProhibitionSensor(Entity):
         return self._api.prohibition['status']
 
     @property
-    def device_state_attributes(self):
+    def extra_state_attributes(self):
         """Return the state attributes of the sensor."""
         data = {}
         keys = list(self._api.prohibition.keys())
