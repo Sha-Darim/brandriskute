@@ -1,6 +1,6 @@
 ![stability-wip](https://img.shields.io/badge/stability-work_in_progress-lightgrey.svg?style=for-the-badge)
 
-[![Version](https://img.shields.io/badge/version-1.1.3-green.svg?style=for-the-badge)](#) [![maintained](https://img.shields.io/maintenance/yes/2021.svg?style=for-the-badge)](#)
+[![Version](https://img.shields.io/badge/version-1.1.3-green.svg?style=for-the-badge)](#) [![maintained](https://img.shields.io/maintenance/yes/2022.svg?style=for-the-badge)](#)
 
 [![maintainer](https://img.shields.io/badge/maintainer-Fredric%20Palmgren%20%40sha--darim-blue.svg?style=for-the-badge)](#)
 
