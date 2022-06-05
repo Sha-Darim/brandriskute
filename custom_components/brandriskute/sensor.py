@@ -1,35 +1,23 @@
-"""
-
-Example configuration
-
-sensor:
-  - platform: brandriskute
-    latitude: !secret lat_coord
-    longitude: !secret long_coord
-    forecast: false
-    prohibition: true
-    verbose: false
-"""
+"""The Brandrisk Ute component."""
 from __future__ import annotations
 
-import logging
-import json
 from datetime import timedelta
+import json
+import logging
 from typing import Any
-
 from urllib.request import urlopen
 
 import voluptuous as vol
 
-from homeassistant.core import HomeAssistant
-import homeassistant.helpers.config_validation as cv
-from homeassistant.helpers.entity_platform import AddEntitiesCallback
-from homeassistant.helpers.typing import ConfigType, DiscoveryInfoType, StateType
 from homeassistant.components.sensor import (
     PLATFORM_SCHEMA as PARENT_PLATFORM_SCHEMA,
     SensorEntity,
 )
 from homeassistant.const import CONF_LATITUDE, CONF_LONGITUDE, CONF_NAME
+from homeassistant.core import HomeAssistant
+import homeassistant.helpers.config_validation as cv
+from homeassistant.helpers.entity_platform import AddEntitiesCallback
+from homeassistant.helpers.typing import ConfigType, DiscoveryInfoType, StateType
 from homeassistant.util import Throttle
 
 __version__ = "1.1.3"
@@ -54,6 +42,18 @@ PLATFORM_SCHEMA = PARENT_PLATFORM_SCHEMA.extend(
         vol.Optional(CONF_VERBOSE, default=True): cv.boolean,
     }
 )
+
+"""
+Example configuration
+
+sensor:
+  - platform: brandriskute
+    latitude: !secret lat_coord
+    longitude: !secret long_coord
+    forecast: false
+    prohibition: true
+    verbose: false
+"""
 
 
 async def async_setup_platform(
@@ -102,6 +102,7 @@ class BrandriskSensor(SensorEntity):
 
     @property
     def native_value(self) -> StateType:
+        """Return value for sensor."""
         return self._api.state
 
     @property
@@ -142,6 +143,7 @@ class BrandriskForecastSensor(SensorEntity):
 
     @property
     def native_value(self) -> StateType:
+        """Return value for sensor."""
         return self._api.state
 
     @property
@@ -172,6 +174,7 @@ class BrandriskProhibitionSensor(SensorEntity):
 
     @property
     def native_value(self) -> StateType:
+        """Return value for sensor."""
         return self._api.prohibition["status"]
 
     @property
