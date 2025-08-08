@@ -3,10 +3,10 @@
     "step": {
       "user": {
         "title": "Brandrisk Ute",
-        "description": "Supply data",
+        "description": "Please supply data",
         "data": {
-          "use_forecast": "Anvand prognos",
-          "use_prohibition": "Använd eldningsforbud",
+          "use_forecast": "Use prognosis",
+          "use_prohibition": "Use fire prohibition",
           "verbose": "Verbose"
         }
       }
