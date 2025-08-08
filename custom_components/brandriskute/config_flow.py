@@ -10,14 +10,18 @@ class BrandriskConfigFlow(config_entries.ConfigFlow, domain=DOMAIN):
         if user_input is not None:
             return self.async_create_entry(title=user_input[CONF_NAME], data=user_input)
 
+        data_schema = vol.Schema(
+            {
+                vol.Required("name"): str,
+                vol.Required("latitude"): float,
+                vol.Required("longitude"): float,
+                vol.Optional("use_forecast", default=True): bool,
+                vol.Optional("use_prohibition", default=True): bool,
+                vol.Optional("verbose", default=True): bool,
+            }
+        )
+
         return self.async_show_form(
             step_id="user",
-            data_schema=vol.Schema({
-                vol.Required(CONF_NAME): str,
-                vol.Required(CONF_LATITUDE): float,
-                vol.Required(CONF_LONGITUDE): float,
-                vol.Optional(CONF_USE_FORECAST, default=True): bool,
-                vol.Optional(CONF_USE_PROHIBITION, default=True): bool,
-                vol.Optional(CONF_VERBOSE, default=True): bool,
-            })
+            data_schema=data_schema
         )
