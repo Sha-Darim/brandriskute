@@ -1,0 +1,15 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "Brandrisk Ute",
+        "description": "Ange data",
+        "data": {
+          "use_forecast": "Anvand prognos",
+          "use_prohibition": "Använd eldningsforbud",
+          "verbose": "Detaljerat"
+        }
+      }
+    }
+  }
+}
