@@ -3,10 +3,10 @@
     "step": {
       "user": {
         "title": "Brandrisk Ute",
-        "description": "Ange data",
+        "description": "Ange inst\u00E4llningar",
         "data": {
-          "use_forecast": "Anvand prognos",
-          "use_prohibition": "Använd eldningsforbud",
+          "use_forecast": "Anv\u00E4nd prognos",
+          "use_prohibition": "Anv\u00E4nd eldningsforbud",
           "verbose": "Detaljerat"
         }
       }
