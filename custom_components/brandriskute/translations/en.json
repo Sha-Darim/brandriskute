@@ -5,6 +5,9 @@
         "title": "Brandrisk Ute",
         "description": "Please supply data",
         "data": {
+          "name": "Name",
+          "latitude": "Latitude",
+          "longitude": "Longitude",
           "use_forecast": "Use prognosis",
           "use_prohibition": "Use fire prohibition",
           "verbose": "Verbose"
