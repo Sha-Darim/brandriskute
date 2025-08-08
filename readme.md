@@ -16,9 +16,15 @@ The plugin supplies three different sensors:
 3. Fire prohibition
 
 ## Installation:
-1. Install this component by creating a `custom_components` folder in the same folder as your configuration.yaml is, if you don't already have one.
-2. Inside that folder, create another folder named `brandriskute`. 
-3. Use intewgrations to add yor datta
+1. Use [HACS](https://hacs.xyz/docs/setup/download), in `HACS > Integrations > Explore & Add Repositories` search for "Brandrisk Ute". After adding this `https://github.com/alandtse/tesla` as a custom repository. Skip to 7.
+2. If you do not have HACS, use the tool of choice to open the directory (folder) for your HA configuration (where you find `configuration.yaml`).
+3. If you do not have a `custom_components` directory (folder) there, you need to create it.
+4. In the `custom_components` directory (folder) create a new folder called `brandriskut`.
+5. Download _all_ the files from the `custom_components/brandriskut/` folder in this repository.
+6. Place the files you downloaded in the new directory (folder) you created.
+7. Inside that folder, create another folder named `brandriskute`.
+8. Restart Home Assistant.
+9. Add the integration: [![Add Integration][add-integration-badge]][add-integration] or in the HA UI go to "Settings" -> "Devices & Services" then click "+" and search for Brandrisk
 
 **Configuration variables:**
 
@@ -47,4 +53,7 @@ action:
 ***
 
 <a href="https://www.buymeacoffee.com/shadarim" target="_blank"><img src="https://www.buymeacoffee.com/assets/img/custom_images/orange_img.png" alt="Buy Me A Coffee" style="height: 41px !important;width: 174px !important;box-shadow: 0px 3px 2px 0px rgba(190, 190, 190, 0.5) !important;-webkit-box-shadow: 0px 3px 2px 0px rgba(190, 190, 190, 0.5) !important;" ></a>
+
+[add-integration]: https://my.home-assistant.io/redirect/config_flow_start?domain=brandriskute
+[add-integration-badge]: https://my.home-assistant.io/badges/config_flow_start.svg
 
