@@ -3,9 +3,10 @@
   "name": "Brandrisk ute",
   "documentation": "https://github.com/Sha-Darim/brandriskute",
   "dependencies": [],
-  "codeowners": ["@Sha-Darim"],
+  "codeowners": [ "@Sha-Darim" ],
   "issue_tracker": "https://github.com/Sha-Darim/brandriskute/issues",
-  "version": "v1.1.3",
+  "version": "v2",
   "requirements": [],
-  "iot_class": "cloud_polling"
+  "iot_class": "cloud_polling",
+  "config_flow": true
 }
