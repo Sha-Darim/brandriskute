@@ -5,8 +5,11 @@
         "title": "Brandrisk Ute",
         "description": "Ange inst\u00E4llningar",
         "data": {
+          "name": "Namn",
+          "latitude": "Lattitud",
+          "longitude": "Longitud",
           "use_forecast": "Anv\u00E4nd prognos",
-          "use_prohibition": "Anv\u00E4nd eldningsforbud",
+          "use_prohibition": "Anv\u00E4nd eldningsf\u00F6rbud",
           "verbose": "Detaljerat"
         }
       }
