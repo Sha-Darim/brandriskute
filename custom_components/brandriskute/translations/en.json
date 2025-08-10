@@ -13,6 +13,10 @@
           "verbose": "Verbose"
         }
       }
+    },
+    "error": {
+      "invalid_name": "Name cannot be empty",
+      "name_exists": "There is already a configuration with this name"
     }
   }
 }

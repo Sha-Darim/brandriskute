@@ -13,6 +13,10 @@
           "verbose": "Detaljerat"
         }
       }
+    },
+    "error": {
+      "invalid_name": "Namn får inte vara tomt",
+      "name_exists": "Det finns redan en konfiguration med detta namn"
     }
   }
 }

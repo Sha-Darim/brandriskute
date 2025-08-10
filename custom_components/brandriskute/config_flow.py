@@ -1,6 +1,6 @@
 import voluptuous as vol
 from homeassistant import config_entries
-from homeassistant.const import CONF_NAME, CONF_LATITUDE, CONF_LONGITUDE
+from homeassistant.const import CONF_LATITUDE, CONF_LONGITUDE, CONF_NAME
 from .const import DOMAIN, CONF_USE_FORECAST, CONF_USE_PROHIBITION, CONF_VERBOSE
 
 class BrandriskConfigFlow(config_entries.ConfigFlow, domain=DOMAIN):
@@ -29,11 +29,11 @@ class BrandriskConfigFlow(config_entries.ConfigFlow, domain=DOMAIN):
         data_schema = vol.Schema(
             {
                 vol.Required(CONF_NAME): str,
-                vol.Required(CONF_LATITUDE): float,
-                vol.Required(CONF_LONGITUDE): float,
-                vol.Optional(CONF_USE_FORECAST, default=True): bool,
-                vol.Optional(CONF_USE_PROHIBITION, default=True): bool,
-                vol.Optional(CONF_VERBOSE, default=True): bool,
+                vol.Required("latitude"): float,
+                vol.Required("longitude"): float,
+                vol.Optional("use_forecast", default=True): bool,
+                vol.Optional("use_prohibition", default=True): bool,
+                vol.Optional("verbose", default=True): bool,
             }
         )
 
