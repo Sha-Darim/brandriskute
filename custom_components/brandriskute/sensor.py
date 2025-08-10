@@ -11,15 +11,7 @@ from .coordinator import BrandriskCoordinator
 ICON = ["mdi:fire-alert", "mdi:pine-tree-fire", "mdi:fire-off"]
 
 async def async_setup_entry(hass: HomeAssistant, entry: ConfigEntry, async_add_entities: AddEntitiesCallback):
-    coordinator = BrandriskCoordinator(
-        hass,
-        entry.data[CONF_LATITUDE],
-        entry.data[CONF_LONGITUDE],
-        entry.data.get(CONF_USE_FORECAST, True),
-        entry.data.get(CONF_USE_PROHIBITION, True),
-        entry.data.get(CONF_VERBOSE, True),
-    )
-    await coordinator.async_config_entry_first_refresh()
+    coordinator = hass.data[DOMAIN][entry.entry_id]
 
     sensors = [
         BrandriskSensor(coordinator, entry.data[CONF_NAME])
