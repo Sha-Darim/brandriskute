@@ -1,6 +1,5 @@
 {
   "name": "Brandrisk ute",
-  "render_readme": true,
-  "domains": ["sensor"],
-  "country": "se"
+  "country": "se",
+  "render_readme": true
 }
