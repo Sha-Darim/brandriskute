@@ -19,8 +19,8 @@ The plugin supplies three different sensors:
 1. Use [HACS](https://hacs.xyz/docs/setup/download), in `HACS > Integrations > Explore & Add Repositories` search for "Brandrisk Ute". After adding this `https://github.com/alandtse/tesla` as a custom repository. Skip to 7.
 2. If you do not have HACS, use the tool of choice to open the directory (folder) for your HA configuration (where you find `configuration.yaml`).
 3. If you do not have a `custom_components` directory (folder) there, you need to create it.
-4. In the `custom_components` directory (folder) create a new folder called `brandriskut`.
-5. Download _all_ the files from the `custom_components/brandriskut/` folder in this repository.
+4. In the `custom_components` directory (folder) create a new folder called `brandriskute`.
+5. Download _all_ the files from the `custom_components/brandriskute/` folder in this repository.
 6. Place the files you downloaded in the new directory (folder) you created.
 7. Inside that folder, create another folder named `brandriskute`.
 8. Restart Home Assistant.
